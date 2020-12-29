@@ -67,13 +67,25 @@ public class Main {
 //        System.out.println(percentResult);
 
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter your age: ");
-//        int age = scanner.nextInt();
-//        System.out.println("Your current age is: "+age);
+        System.out.print("Principal: ");
+        double principal = scanner.nextDouble();
+        System.out.print("Annual interest rate: ");
+        double interest_rate = scanner.nextDouble();
+        System.out.print("Period(years): ");
+        double period = scanner.nextDouble();
 
-        System.out.println("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Your name is: "+name);
+        double r= (interest_rate/100)/12;
+        double n= period * 12;
+
+        double numerator = r*(Math.pow((1+r),n));
+        double denominator = (Math.pow((1+r),n))-1;
+
+        double m = principal * (numerator/denominator);
+        System.out.print(m);
+
+
+
+
 
 
 
