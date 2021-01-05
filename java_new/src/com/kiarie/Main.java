@@ -65,25 +65,43 @@ public class Main {
 //        NumberFormat percentage = NumberFormat.getPercentInstance();
 //        String percentResult = percentage.format(0.05);
 //        System.out.println(percentResult);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Principal: ");
+//        double principal = scanner.nextDouble();
+//        System.out.print("Annual interest rate: ");
+//        double interest_rate = scanner.nextDouble();
+//        System.out.print("Period(years): ");
+//        double period = scanner.nextDouble();
+//
+//        double r= (interest_rate/100)/12;
+//        double n= period * 12;
+//
+//        double numerator = r*(Math.pow((1+r),n));
+//        double denominator = (Math.pow((1+r),n))-1;
+//
+//        double m = principal * (numerator/denominator);
+//        System.out.print(m);
+
+//          Scanner scanner = new Scanner(System.in);
+//          int temperature = scanner.nextInt();
+//
+//          String day = temperature > 25? "Hot day" : "cool day";
+//          System.out.println(day);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Principal: ");
-        double principal = scanner.nextDouble();
-        System.out.print("Annual interest rate: ");
-        double interest_rate = scanner.nextDouble();
-        System.out.print("Period(years): ");
-        double period = scanner.nextDouble();
-
-        double r= (interest_rate/100)/12;
-        double n= period * 12;
-
-        double numerator = r*(Math.pow((1+r),n));
-        double denominator = (Math.pow((1+r),n))-1;
-
-        double m = principal * (numerator/denominator);
-        System.out.print(m);
-
-
+        String job = scanner.nextLine();
+          switch (job){
+              case "Doctor":
+                  System.out.println("you're a doctor");
+                  break;
+              case "Teacher":
+                  System.out.println("you're a teacher");
+              case "Farmer":
+                  System.out.println("you're a farmer");
+              default:
+                  System.out.println("you're a developer");
+          }
 
 
 
