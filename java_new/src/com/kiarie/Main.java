@@ -104,26 +104,52 @@ public class Main {
 //          }
 
 //        FIZZBUZZ EXERCISE
-        System.out.println("   FIZZBUZZ CHALLENGE");
+//        System.out.println("   FIZZBUZZ CHALLENGE");
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        for(int count=0; count<10;count++) {
+//            System.out.println("Number: ");
+//            int number = scanner.nextInt();
+//            if (number % 3 == 0 && number % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (number % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (number % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(number);
+//            }
+//        }
+//        int count = 0;
+//        while (count >0){
+//            System.out.println("Loop count is at: "+count);
+//            count--;
+//        }
+//        String timer="continue";
+//        String i;
+//        Scanner scanner = new Scanner(System.in);
+//        do {
+//            System.out.println("input");
+//            i=scanner.next();
+//            if(i.equals("pass")){
+//                continue;
+//            }
+//            else if(!i.equals("stop")){
+//                System.out.println(timer);
+//                continue;
+//            }
+//        }
+//        while (!i.equals("stop"));
 
-        Scanner scanner = new Scanner(System.in);
-
-        for(int count=0; count<10;count++) {
-            System.out.println("Number: ");
-            int number = scanner.nextInt();
-            if (number % 3 == 0 && number % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (number % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (number % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(number);
-            }
-        }
-
-
-
+          String [] counties = {"Kiambu","Kisumu","Kirinyaga","Kitui"};
+          for (String county : counties){
+              System.out.println(county);
+          }
+        System.out.println(" backwards");
+          for(int i=counties.length-1; i>=0; i--){
+              System.out.println(counties[i]);
+          }
 
 
 
