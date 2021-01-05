@@ -89,19 +89,38 @@ public class Main {
 //          String day = temperature > 25? "Hot day" : "cool day";
 //          System.out.println(day);
 
+//        Scanner scanner = new Scanner(System.in);
+//        String job = scanner.nextLine();
+//          switch (job){
+//              case "Doctor":
+//                  System.out.println("you're a doctor");
+//                  break;
+//              case "Teacher":
+//                  System.out.println("you're a teacher");
+//              case "Farmer":
+//                  System.out.println("you're a farmer");
+//              default:
+//                  System.out.println("you're a developer");
+//          }
+
+//        FIZZBUZZ EXERCISE
+        System.out.println("   FIZZBUZZ CHALLENGE");
+
         Scanner scanner = new Scanner(System.in);
-        String job = scanner.nextLine();
-          switch (job){
-              case "Doctor":
-                  System.out.println("you're a doctor");
-                  break;
-              case "Teacher":
-                  System.out.println("you're a teacher");
-              case "Farmer":
-                  System.out.println("you're a farmer");
-              default:
-                  System.out.println("you're a developer");
-          }
+
+        for(int count=0; count<10;count++) {
+            System.out.println("Number: ");
+            int number = scanner.nextInt();
+            if (number % 3 == 0 && number % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (number % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (number % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(number);
+            }
+        }
 
 
 
