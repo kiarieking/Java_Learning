@@ -66,6 +66,7 @@ public class Main {
 //        String percentResult = percentage.format(0.05);
 //        System.out.println(percentResult);
 //
+//              MORTGAGE CALCULATOR
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.print("Principal: ");
 //        double principal = scanner.nextDouble();
@@ -142,17 +143,53 @@ public class Main {
 //        }
 //        while (!i.equals("stop"));
 
-          String [] counties = {"Kiambu","Kisumu","Kirinyaga","Kitui"};
-          for (String county : counties){
-              System.out.println(county);
-          }
-        System.out.println(" backwards");
-          for(int i=counties.length-1; i>=0; i--){
-              System.out.println(counties[i]);
-          }
+//          String [] counties = {"Kiambu","Kisumu","Kirinyaga","Kitui"};
+//          for (String county : counties){
+//              System.out.println(county);
+//          }
+//        System.out.println(" backwards");
+//          for(int i=counties.length-1; i>=0; i--){
+//              System.out.println(counties[i]);
+//          }
 
 
+//        MORTGAGE CALCULATOR
+        Scanner scanner = new Scanner(System.in);
+        double principal;
+        double interest_rate;
+        double period;
+        do{
+            System.out.print("Principal: ");
+            principal = scanner.nextDouble();
+            if (principal>1_000_000 || principal<1){
+                System.out.println("Your pricipal should be between $1,000,000 and 1");
+            }
+        }while(principal>1_000_000 || principal<1);
+        do{
+            System.out.println("Annual interest rate: ");
+            interest_rate = scanner.nextDouble();
+            if(interest_rate>30 || interest_rate<0){
+                System.out.println("Your interest rate should be between 0 and 30 percent");
+            }
+        }while(interest_rate>30 || interest_rate<0);
+        do{
+            System.out.println("Period(years): ");
+            period = scanner.nextDouble();
+            if(period>50 || period<1){
+                System.out.println("Your period should be between 1 and 50 years");
+            }
+        }while(period>50 || period<1);
 
+        double r= (interest_rate/100)/12;
+        double n= period * 12;
+
+        double numerator = r*(Math.pow((1+r),n));
+        double denominator = (Math.pow((1+r),n))-1;
+
+        double m = principal * (numerator/denominator);
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String monthlyRate = currency.format(m);
+        System.out.print("Your monthly mortgage rate is: "+monthlyRate);
 
     }
 }
