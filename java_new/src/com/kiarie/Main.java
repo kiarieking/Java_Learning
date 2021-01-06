@@ -190,21 +190,34 @@ public class Main {
 //        NumberFormat currency = NumberFormat.getCurrencyInstance();
 //        String monthlyRate = currency.format(m);
 //        System.out.print("Your monthly mortgage rate is: "+monthlyRate);
-
-          char [] grades = {'A','B','A','C','A','B'};
-          int count = countGrades('A',grades);
-          System.out.println("Grade occurrences: "+count);
-
+//
+//          char [] grades = {'A','B','A','C','A','B'};
+//          int count = countGrades('A',grades);
+//          System.out.println("Grade occurrences: "+count);
+//
+//    }
+//    public static int countGrades(char grade, char[] grades){
+//        int occurrence=0;
+//        System.out.println(grades.length);
+//
+//        for(char grade1:grades){
+//            if(grade1==grade){
+//                occurrence++;
+//            }
+//        }
+//        return occurrence;
+        Phone phone = new Phone("Tecno","Android",16);
+        System.out.println(phone.brand+" "+phone.operatingSystem+" "+phone.cameraMp);
     }
-    public static int countGrades(char grade, char[] grades){
-        int occurrence=0;
-        System.out.println(grades.length);
+    static class Phone{
+        String brand;
+        String operatingSystem;
+        int cameraMp;
 
-        for(char grade1:grades){
-            if(grade1==grade){
-                occurrence++;
-            }
+        Phone(String brand, String operatingSystem, int cameraMp){
+            this.brand=brand;
+            this.operatingSystem=operatingSystem;
+            this.cameraMp=cameraMp;
         }
-        return occurrence;
     }
 }
